@@ -26,21 +26,95 @@ public class frmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        menuventasautos = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        menuclientes = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        menuventas = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        menuusuarios = new javax.swing.JMenuItem();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenuItem6.setText("jMenuItem6");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setText("GESTION VENTAS DE AUTOS");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-12 at 00.19.29.jpeg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, -1));
+
+        jMenuBar1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-12 at 12.21.46.jpeg"))); // NOI18N
+        jMenu3.setText("Gestion");
+
+        menuventasautos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        menuventasautos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-11 at 23.27.05.jpeg"))); // NOI18N
+        menuventasautos.setText("Autos");
+        jMenu3.add(menuventasautos);
+        jMenu3.add(jSeparator1);
+
+        menuclientes.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        menuclientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/Usuario.jpeg"))); // NOI18N
+        menuclientes.setText("Clientes");
+        menuclientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuclientesActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menuclientes);
+        jMenu3.add(jSeparator2);
+
+        menuventas.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        menuventas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-11 at 23.40.23.jpeg"))); // NOI18N
+        menuventas.setText("Ventas");
+        jMenu3.add(menuventas);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-12 at 12.21.46 (1).jpeg"))); // NOI18N
+        jMenu1.setText("Usuarios");
+
+        menuusuarios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        menuusuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/us2.jpeg"))); // NOI18N
+        menuusuarios.setText("Registros de usuarios");
+        jMenu1.add(menuusuarios);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void menuclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuclientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuclientesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +152,19 @@ public class frmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JMenuItem menuclientes;
+    private javax.swing.JMenuItem menuusuarios;
+    private javax.swing.JMenuItem menuventas;
+    private javax.swing.JMenuItem menuventasautos;
     // End of variables declaration//GEN-END:variables
 }
