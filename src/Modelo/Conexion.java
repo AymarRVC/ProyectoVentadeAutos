@@ -15,10 +15,10 @@ import java.util.logging.Logger;
  * 
  */
 public class Conexion {
-     final String bdd="pure_witer"; 
+     final String bdd="venta_autos"; 
    final String user="root";
     String pwd="";
-    String url="jdbc:mysql://localhost:3306/" + bdd;
+    String url="jdbc:mysql://localhost:3307/" + bdd;
     Connection conexion;
     
     public Connection getConexion(){
