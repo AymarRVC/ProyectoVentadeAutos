@@ -128,7 +128,7 @@ public class ClsConsultaAutos extends Conexion {
         }return obList;
      }
    //Metodo Para Buscar ClsAutos por su Marca
-       public boolean BuscarClsEquipos(ClsAutos obj){
+       public boolean BuscarClsAutos(ClsAutos obj){
     PreparedStatement ps =null;
     Connection con= (Connection)getConexion();
     ResultSet res=null;
