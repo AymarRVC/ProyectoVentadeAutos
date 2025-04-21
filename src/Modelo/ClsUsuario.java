@@ -4,10 +4,7 @@
  */
 package Modelo;
 
-/**
- *
- * @author ecede
- */
+
 public class ClsUsuario {
     int id;
     String nombre,password,rol,estado;

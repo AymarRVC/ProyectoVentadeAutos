@@ -9,10 +9,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author ecede
- */
+
 public class ClsConsultaClientes extends Conexion {
      //Metodo para guardar
     public boolean Guardar(ClsClientes clientes){

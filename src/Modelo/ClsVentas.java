@@ -4,10 +4,7 @@
  */
 package Modelo;
 
-/**
- *
- * @author ecede
- */
+
 public class ClsVentas {
     int id;
     String fecha;

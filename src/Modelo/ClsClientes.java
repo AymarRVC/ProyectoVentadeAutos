@@ -4,10 +4,7 @@
  */
 package Modelo;
 
-/**
- *
- * @author ecede
- */
+
 public class ClsClientes {
     int id;
     String nombre,apellido,correo,telefono;

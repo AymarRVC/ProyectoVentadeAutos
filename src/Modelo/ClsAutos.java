@@ -4,10 +4,6 @@
  */
 package Modelo;
 
-/**
- *
- * @author ecede
- */
 public class ClsAutos {
     int id, anio;
     String marca, modelo, estado;

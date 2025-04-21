@@ -5,6 +5,6 @@
 package Controlador;
 
 
-public class CtrlAutos {
-   
+public class CtrlUsuario {
+    
 }

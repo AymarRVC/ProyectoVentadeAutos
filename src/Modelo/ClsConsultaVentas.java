@@ -9,10 +9,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author ecede
- */
+
 public class ClsConsultaVentas extends Conexion {
     //Metodo para guardar
     public boolean Guardar(ClsVentas ventas){
@@ -124,7 +121,7 @@ public class ClsConsultaVentas extends Conexion {
         }return obList;
      }
    //Metodo Para Buscar ClsUsuarios por su nombre
-       public boolean BuscarClsUsuario(ClsVentas obj){
+    /*   public boolean BuscarClsUsuario(ClsVentas obj){
     PreparedStatement ps =null;
     Connection con= (Connection)getConexion();
     ResultSet res=null;
@@ -157,5 +154,5 @@ public class ClsConsultaVentas extends Conexion {
                     Logger.getLogger(ClsConsultaVentas.class.getName()).log(Level.SEVERE, null, ex);
                 }
         }
-    }
+    }*/
 }
