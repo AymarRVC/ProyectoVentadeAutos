@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-04-2025 a las 05:36:52
+-- Tiempo de generación: 30-04-2025 a las 08:02:06
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -61,8 +61,18 @@ CREATE TABLE `usuarios` (
   `nombre_usuario` varchar(200) NOT NULL,
   `password_usuario` varchar(200) NOT NULL,
   `rol_usurio` varchar(200) NOT NULL,
-  `estado_usuario` varchar(300) NOT NULL
+  `estado_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `nombre_usuario`, `password_usuario`, `rol_usurio`, `estado_usuario`) VALUES
+(1, 'admin', 'admin123', 'Administrador', 1),
+(2, 'vendedor1', 'vendedor123', 'Vendedor', 1),
+(4, 'rt2', '123', 'Administrador', 1),
+(6, 'sss222', '3333', 'Administrador', 1);
 
 -- --------------------------------------------------------
 
@@ -128,7 +138,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
@@ -151,3 +161,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
