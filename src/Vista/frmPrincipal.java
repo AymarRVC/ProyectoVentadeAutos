@@ -4,6 +4,10 @@
  */
 package Vista;
 
+import Controlador.CtrlUsuario;
+import Modelo.ClsConsultaUsuarios;
+import Modelo.ClsUsuario;
+
 /**
  *
  * @author ecede
@@ -15,6 +19,7 @@ public class frmPrincipal extends javax.swing.JFrame {
      */
     public frmPrincipal() {
         initComponents();
+        
     }
 
     /**
@@ -28,9 +33,11 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        fondo = new javax.swing.JPanel();
+        lbltitulo = new javax.swing.JLabel();
+        lbluser = new javax.swing.JLabel();
+        Contenedor = new javax.swing.JPanel();
+        lblimagen = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         menuventasautos = new javax.swing.JMenuItem();
@@ -48,25 +55,48 @@ public class frmPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel2.setText("GESTION VENTAS DE AUTOS");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
+        lbltitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lbltitulo.setText("GESTION VENTAS DE AUTOS");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+        javax.swing.GroupLayout fondoLayout = new javax.swing.GroupLayout(fondo);
+        fondo.setLayout(fondoLayout);
+        fondoLayout.setHorizontalGroup(
+            fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fondoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbltitulo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+        fondoLayout.setVerticalGroup(
+            fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fondoLayout.createSequentialGroup()
+                .addComponent(lbltitulo)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-12 at 00.19.29.jpeg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, -1));
+        lbluser.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbluser.setText("Usuario");
+        getContentPane().add(lbluser, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 410, -1));
+
+        lblimagen.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblimagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblimagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-12 at 00.19.29.jpeg"))); // NOI18N
+        lblimagen.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+
+        javax.swing.GroupLayout ContenedorLayout = new javax.swing.GroupLayout(Contenedor);
+        Contenedor.setLayout(ContenedorLayout);
+        ContenedorLayout.setHorizontalGroup(
+            ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblimagen, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        ContenedorLayout.setVerticalGroup(
+            ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblimagen, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        getContentPane().add(Contenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 820, 510));
 
         jMenuBar1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
@@ -103,6 +133,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         menuusuarios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         menuusuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/us2.jpeg"))); // NOI18N
         menuusuarios.setText("Registros de usuarios");
+        menuusuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuusuariosActionPerformed(evt);
+            }
+        });
         jMenu1.add(menuusuarios);
 
         jMenuBar1.add(jMenu1);
@@ -115,6 +150,20 @@ public class frmPrincipal extends javax.swing.JFrame {
     private void menuclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuclientesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_menuclientesActionPerformed
+
+    private void menuusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuusuariosActionPerformed
+        ClsUsuario usuario = new ClsUsuario();
+        ClsConsultaUsuarios consultaUsuarios = new ClsConsultaUsuarios();
+        frmUsuario frmUsuario1 = new frmUsuario();
+        CtrlUsuario ctrl = new CtrlUsuario(usuario,consultaUsuarios,frmUsuario1);
+        ctrl.Iniciar();
+        this.lblimagen.setVisible(false);
+        this.lbltitulo.setVisible(false);
+        this.fondo.setVisible(false);
+        Contenedor.add(frmUsuario1);
+        frmUsuario1.setLocation((Contenedor.getWidth()-frmUsuario1.getWidth())/2, (Contenedor.getHeight()-frmUsuario1.getHeight())/2);
+        frmUsuario1.setVisible(true);
+    }//GEN-LAST:event_menuusuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,19 +201,21 @@ public class frmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel Contenedor;
+    public javax.swing.JPanel fondo;
+    public javax.swing.JMenu jMenu1;
+    public javax.swing.JMenu jMenu3;
+    public javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
-    private javax.swing.JMenuItem menuclientes;
-    private javax.swing.JMenuItem menuusuarios;
-    private javax.swing.JMenuItem menuventas;
-    private javax.swing.JMenuItem menuventasautos;
+    public javax.swing.JLabel lblimagen;
+    public javax.swing.JLabel lbltitulo;
+    public javax.swing.JLabel lbluser;
+    public javax.swing.JMenuItem menuclientes;
+    public javax.swing.JMenuItem menuusuarios;
+    public javax.swing.JMenuItem menuventas;
+    public javax.swing.JMenuItem menuventasautos;
     // End of variables declaration//GEN-END:variables
 }

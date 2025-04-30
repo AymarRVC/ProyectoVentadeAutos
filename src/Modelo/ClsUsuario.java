@@ -6,8 +6,8 @@ package Modelo;
 
 
 public class ClsUsuario {
-    int id;
-    String nombre,password,rol,estado;
+    int id,estado;
+    String nombre,password,rol;
     
      public int getId() {
         return id;
@@ -41,11 +41,11 @@ public class ClsUsuario {
         this.rol = rol;
     }
     
-     public String getEstado() {
+     public int getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(int estado) {
         this.estado = estado;
     }
     

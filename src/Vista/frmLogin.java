@@ -4,6 +4,12 @@
  */
 package Vista;
 
+import Controlador.CtrlLogin;
+import Modelo.ClsConsultaUsuarios;
+import Modelo.ClsUsuario;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author monta
@@ -13,8 +19,13 @@ public class frmLogin extends javax.swing.JFrame {
     /**
      * Creates new form frmLogin
      */
-    public frmLogin() {
+    public frmLogin() throws Exception {
         initComponents();
+        this.setLocationRelativeTo(null);
+        ClsUsuario usuario = new ClsUsuario();
+        ClsConsultaUsuarios consultaUsuario = new ClsConsultaUsuarios();
+        CtrlLogin ctrl = new CtrlLogin(usuario, consultaUsuario, this);
+        ctrl.Iniciar();
     }
 
     /**
@@ -32,8 +43,9 @@ public class frmLogin extends javax.swing.JFrame {
         btningresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        txtpassword = new javax.swing.JTextField();
         txtusuario = new javax.swing.JTextField();
+        jchmostrar = new javax.swing.JCheckBox();
+        txtpassword = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,7 +69,7 @@ public class frmLogin extends javax.swing.JFrame {
                 btningresarActionPerformed(evt);
             }
         });
-        jPanel1.add(btningresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
+        jPanel1.add(btningresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/login_7960597 (1).png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, -10, -1, 160));
@@ -66,8 +78,16 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 50));
-        jPanel1.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 190, 30));
         jPanel1.add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 190, 30));
+
+        jchmostrar.setText("Mostrar Clave");
+        jchmostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jchmostrarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jchmostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
+        jPanel1.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 190, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 350, 410));
 
@@ -80,6 +100,10 @@ public class frmLogin extends javax.swing.JFrame {
     private void btningresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btningresarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btningresarActionPerformed
+
+    private void jchmostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchmostrarActionPerformed
+        
+    }//GEN-LAST:event_jchmostrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,20 +135,25 @@ public class frmLogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmLogin().setVisible(true);
+                try {
+                    new frmLogin().setVisible(true);
+                } catch (Exception ex) {
+                    Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btningresar;
+    public javax.swing.JButton btningresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtpassword;
-    private javax.swing.JTextField txtusuario;
+    public javax.swing.JCheckBox jchmostrar;
+    public javax.swing.JPasswordField txtpassword;
+    public javax.swing.JTextField txtusuario;
     // End of variables declaration//GEN-END:variables
 }
