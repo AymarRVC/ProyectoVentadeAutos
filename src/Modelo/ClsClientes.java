@@ -7,7 +7,7 @@ package Modelo;
 
 public class ClsClientes {
     int id;
-    String nombre,apellido,correo,telefono;
+    String cedula, nombre,apellido,correo,telefono;
     
     public int getId() {
         return id;
@@ -16,6 +16,15 @@ public class ClsClientes {
     public void setId(int id) {
         this.id = id;
     }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+    
      public String getNombre() {
         return nombre;
     }
@@ -49,7 +58,7 @@ public class ClsClientes {
     
     @Override
     public String toString() {
-        return getNombre()+" - "+getApellido()+ " - "+getCorreo()+" - "+getTelefono();
+        return getNombre()+" - "+getApellido();
     }
     
     

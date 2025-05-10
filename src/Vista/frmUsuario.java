@@ -46,6 +46,7 @@ public class frmUsuario extends javax.swing.JInternalFrame {
         btnactualizar = new javax.swing.JButton();
         cmbrol = new javax.swing.JComboBox<>();
         cmbestado = new javax.swing.JComboBox<>();
+        btncerrarformulario = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -140,7 +141,7 @@ public class frmUsuario extends javax.swing.JInternalFrame {
                 btnactualizarActionPerformed(evt);
             }
         });
-        jPanel3.add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, -1, 30));
+        jPanel3.add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, -1, 30));
 
         cmbrol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Vendedor" }));
         jPanel3.add(cmbrol, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 140, -1));
@@ -148,7 +149,10 @@ public class frmUsuario extends javax.swing.JInternalFrame {
         cmbestado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Habilitado", "Deshabilitado" }));
         jPanel3.add(cmbestado, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 140, -1));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 730, 340));
+        btncerrarformulario.setText("Cerrar Formulario");
+        jPanel3.add(btncerrarformulario, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, -1, -1));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 750, 420));
 
         jPanel1.setBackground(new java.awt.Color(148, 189, 209));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -184,6 +188,7 @@ public class frmUsuario extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTable JClientes;
     public javax.swing.JButton btnactualizar;
+    public javax.swing.JButton btncerrarformulario;
     public javax.swing.JButton btneditar;
     public javax.swing.JButton btneliminar;
     public javax.swing.JButton btnguardar;
