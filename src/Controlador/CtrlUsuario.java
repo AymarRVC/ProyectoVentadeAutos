@@ -6,6 +6,7 @@ package Controlador;
 
 import Modelo.ClsConsultaUsuarios;
 import Modelo.ClsUsuario;
+import Vista.frmPrincipal;
 import Vista.frmUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,14 +25,19 @@ public class CtrlUsuario implements ActionListener, KeyListener {
     ClsUsuario em;
     ClsConsultaUsuarios sqlemp;
     frmUsuario frm;
+    frmPrincipal principal;
+    public boolean visible;
 
-    public CtrlUsuario(ClsUsuario em, ClsConsultaUsuarios sqlemp, frmUsuario frm) {
+    public CtrlUsuario(ClsUsuario em, ClsConsultaUsuarios sqlemp, frmUsuario frm,frmPrincipal principal) {
         this.em = em;
         this.sqlemp = sqlemp;
         this.frm = frm;
+        this.principal = principal;
         this.frm.btnguardar.addActionListener(this);
         this.frm.btneditar.addActionListener(this);
+        this.frm.btncerrarformulario.addActionListener(this);
         this.frm.btneliminar.addActionListener(this);
+        
         this.frm.txtbuscar.addKeyListener(this);
         this.frm.btnactualizar.addActionListener((ActionListener) this);
 
@@ -72,6 +78,17 @@ public class CtrlUsuario implements ActionListener, KeyListener {
         frm.btneliminar.setEnabled(false);
         Mostrar();
     }
+     public boolean cerrar() {
+        visible = true;
+
+        frm.setVisible(false);
+
+        principal.Contenedor.setVisible(false);
+        principal.panelfondo.setVisible(true);
+        
+        principal.vis = true;
+        return visible;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -84,6 +101,9 @@ public class CtrlUsuario implements ActionListener, KeyListener {
             frm.txtbuscar.setEnabled(true);
             frm.btnguardar.setEnabled(true);
             frm.txtbuscar.setText(null);
+        }
+        if (e.getSource() == frm.btncerrarformulario) {
+            cerrar();
         }
         if (e.getSource() == frm.btnguardar) {
 

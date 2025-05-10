@@ -25,7 +25,6 @@ public class frmPrincipal extends javax.swing.JFrame {
     public frmPrincipal() {
         initComponents();
 
-        
         if (vis == false) {
 
             this.panelfondo.setVisible(true);
@@ -232,22 +231,15 @@ public class frmPrincipal extends javax.swing.JFrame {
         if (vis == true) {
             this.panelfondo.setVisible(false);
             this.Contenedor.setVisible(true);
-            this.lblimagen.setVisible(false);
-            this.lbltitulo.setVisible(false);
-            this.fondo.setVisible(false);
+
             Contenedor.add(frmCliente1);
             frmCliente1.setLocation((Contenedor.getWidth() - frmCliente1.getWidth()) / 2, (Contenedor.getHeight() - frmCliente1.getHeight()) / 2);
             frmCliente1.setVisible(true);
-        } else {
-            vis = false;
-            this.lblimagen.setVisible(true);
-            this.lbltitulo.setVisible(true);
-            this.fondo.setVisible(true);
         }
 
     }//GEN-LAST:event_menuclientesActionPerformed
 
-   /* public void ACtivar() {
+    /* public void ACtivar() {
         if (ctrlClientes.visible == true) {
             vis = true;
         } else {
@@ -258,14 +250,18 @@ public class frmPrincipal extends javax.swing.JFrame {
         ClsUsuario usuario = new ClsUsuario();
         ClsConsultaUsuarios consultaUsuarios = new ClsConsultaUsuarios();
         frmUsuario frmUsuario1 = new frmUsuario();
-        CtrlUsuario ctrl = new CtrlUsuario(usuario, consultaUsuarios, frmUsuario1);
+        CtrlUsuario ctrl = new CtrlUsuario(usuario, consultaUsuarios, frmUsuario1, this);
         ctrl.Iniciar();
-        this.lblimagen.setVisible(false);
-        this.lbltitulo.setVisible(false);
-        this.fondo.setVisible(false);
-        Contenedor.add(frmUsuario1);
-        frmUsuario1.setLocation((Contenedor.getWidth() - frmUsuario1.getWidth()) / 2, (Contenedor.getHeight() - frmUsuario1.getHeight()) / 2);
-        frmUsuario1.setVisible(true);
+        vis = true;
+        if (vis == true) {
+            this.panelfondo.setVisible(false);
+            this.Contenedor.setVisible(true);
+            Contenedor.add(frmUsuario1);
+            frmUsuario1.setLocation((Contenedor.getWidth() - frmUsuario1.getWidth()) / 2, (Contenedor.getHeight() - frmUsuario1.getHeight()) / 2);
+            frmUsuario1.setVisible(true);
+        }
+
+
     }//GEN-LAST:event_menuusuariosActionPerformed
 
     /**

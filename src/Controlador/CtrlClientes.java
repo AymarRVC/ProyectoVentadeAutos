@@ -82,9 +82,6 @@ public class CtrlClientes implements ActionListener, KeyListener {
 
         principal.Contenedor.setVisible(false);
         principal.panelfondo.setVisible(true);
-        principal.lblimagen.setVisible(true);
-        principal.fondo.setVisible(true);
-        principal.lbltitulo.setVisible(true);
         principal.vis = true;
         return visible;
     }
