@@ -8,6 +8,7 @@ import Modelo.ClsConsultaUsuarios;
 import Modelo.ClsUsuario;
 import Vista.frmPrincipal;
 import Vista.frmUsuario;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -25,29 +26,28 @@ public class CtrlUsuario implements ActionListener, KeyListener {
     ClsUsuario em;
     ClsConsultaUsuarios sqlemp;
     frmUsuario frm;
-    frmPrincipal principal;
-    public boolean visible;
+    frmPrincipal menu = new frmPrincipal();
 
-    public CtrlUsuario(ClsUsuario em, ClsConsultaUsuarios sqlemp, frmUsuario frm,frmPrincipal principal) {
+    public CtrlUsuario(ClsUsuario em, ClsConsultaUsuarios sqlemp, frmUsuario frm, frmPrincipal menu) {
         this.em = em;
         this.sqlemp = sqlemp;
         this.frm = frm;
-        this.principal = principal;
+        this.menu = menu;
         this.frm.btnguardar.addActionListener(this);
         this.frm.btneditar.addActionListener(this);
         this.frm.btncerrarformulario.addActionListener(this);
         this.frm.btneliminar.addActionListener(this);
-        
+
         this.frm.txtbuscar.addKeyListener(this);
         this.frm.btnactualizar.addActionListener((ActionListener) this);
 
-        this.frm.JClientes.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.frm.JUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
 
-                DefaultTableModel modelo = (DefaultTableModel) frm.JClientes.getModel();
+                DefaultTableModel modelo = (DefaultTableModel) frm.JUsuarios.getModel();
                 int fila;
-                fila = frm.JClientes.getSelectedRow();
+                fila = frm.JUsuarios.getSelectedRow();
                 frm.txtbuscar.setEnabled(false);
                 frm.txtid.setText(modelo.getValueAt(fila, 0).toString());
                 frm.txtusuario.setText(modelo.getValueAt(fila, 1).toString());
@@ -78,16 +78,25 @@ public class CtrlUsuario implements ActionListener, KeyListener {
         frm.btneliminar.setEnabled(false);
         Mostrar();
     }
-     public boolean cerrar() {
-        visible = true;
 
+    public void cerrar() {
+
+        FondoPanel fondo2 = new FondoPanel();
+        menu.Contenedor.removeAll();
+        menu.Contenedor.revalidate();
+        menu.Contenedor.repaint();
+        menu.Contenedor.setLayout(new BorderLayout());
+        menu.Contenedor.add(fondo2, BorderLayout.CENTER);
+        menu.Contenedor.setComponentZOrder(fondo2, menu.Contenedor.getComponentCount() - 1);
+
+        menu.Contenedor.addComponentListener(new java.awt.event.ComponentAdapter() {
+            @Override
+            public void componentResized(java.awt.event.ComponentEvent evt) {
+                fondo2.repaint();
+            }
+        });
         frm.setVisible(false);
 
-        principal.Contenedor.setVisible(false);
-        principal.panelfondo.setVisible(true);
-        
-        principal.vis = true;
-        return visible;
     }
 
     @Override
@@ -171,7 +180,7 @@ public class CtrlUsuario implements ActionListener, KeyListener {
             }
         }
         if (e.getSource() == frm.btneliminar) {
-            if (frm.JClientes.getSelectedRow() == -1) {
+            if (frm.JUsuarios.getSelectedRow() == -1) {
                 JOptionPane.showMessageDialog(frm, "Debe seleccionar la fila que desea eliminar");
             } else {
                 em.setId(Integer.parseInt(frm.txtid.getText()));
@@ -231,13 +240,13 @@ public class CtrlUsuario implements ActionListener, KeyListener {
                     tabla.addRow(fila);
                 }
 
-                frm.JClientes.setModel(tabla);
+                frm.JUsuarios.setModel(tabla);
 
                 DefaultTableCellRenderer Alinear = new DefaultTableCellRenderer();
                 Alinear.setHorizontalAlignment(SwingConstants.RIGHT);
-                if (frm.JClientes.getColumnCount() >= 7) {
+                if (frm.JUsuarios.getColumnCount() >= 7) {
                     for (int i = 4; i < 7; i++) {
-                        frm.JClientes.getColumnModel().getColumn(i).setCellRenderer(Alinear);
+                        frm.JUsuarios.getColumnModel().getColumn(i).setCellRenderer(Alinear);
                     }
                 }
 
@@ -279,13 +288,13 @@ public class CtrlUsuario implements ActionListener, KeyListener {
 
                     tabla.addRow(datos);
                 }
-                frm.JClientes.setModel(tabla);
+                frm.JUsuarios.setModel(tabla);
 
                 DefaultTableCellRenderer Alinear = new DefaultTableCellRenderer();
                 Alinear.setHorizontalAlignment(SwingConstants.RIGHT);
-                if (frm.JClientes.getColumnCount() >= 7) {
+                if (frm.JUsuarios.getColumnCount() >= 7) {
                     for (int i = 4; i < 7; i++) {
-                        frm.JClientes.getColumnModel().getColumn(i).setCellRenderer(Alinear);
+                        frm.JUsuarios.getColumnModel().getColumn(i).setCellRenderer(Alinear);
                     }
                 }
             } else {

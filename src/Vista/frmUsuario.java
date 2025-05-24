@@ -26,98 +26,45 @@ public class frmUsuario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel9 = new javax.swing.JLabel();
+        cmbrol = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JUsuarios = new javax.swing.JTable();
         jLabel10 = new javax.swing.JLabel();
+        btnguardar = new javax.swing.JButton();
+        btneliminar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        txtbuscar = new javax.swing.JTextField();
+        btneditar = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         txtid = new javax.swing.JTextField();
-        txtusuario = new javax.swing.JTextField();
-        txtclave = new javax.swing.JTextField();
-        btnguardar = new javax.swing.JButton();
-        btneditar = new javax.swing.JButton();
-        btneliminar = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        txtbuscar = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        JClientes = new javax.swing.JTable();
-        btnactualizar = new javax.swing.JButton();
-        cmbrol = new javax.swing.JComboBox<>();
         cmbestado = new javax.swing.JComboBox<>();
+        txtclave = new javax.swing.JTextField();
+        txtusuario = new javax.swing.JTextField();
+        favicon = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator1 = new javax.swing.JSeparator();
+        btnactualizar = new javax.swing.JButton();
         btncerrarformulario = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
-        setClosable(true);
+        setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel3.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 20));
-
-        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel9.setText("ID:");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel10.setText("Usuario:");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
-
-        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel11.setText("Contraseña:");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
-
-        jLabel12.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel12.setText("Rol:");
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
-
-        jLabel13.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel13.setText("Estado:");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
-
-        txtid.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jPanel3.add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 50, -1));
-
-        txtusuario.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jPanel3.add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 190, 30));
-
-        txtclave.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jPanel3.add(txtclave, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 180, 30));
-
-        btnguardar.setForeground(new java.awt.Color(153, 153, 255));
-        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/guardar.png"))); // NOI18N
-        btnguardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
-
-        btneditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/editar.png"))); // NOI18N
-        btneditar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
-
-        btneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/eliminar.png"))); // NOI18N
-        btneliminar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(btneliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, -1, -1));
+        cmbrol.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        cmbrol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Vendedor" }));
+        cmbrol.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(cmbrol, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 140, 40));
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel8.setText("Buscar:");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, -1, -1));
 
-        txtbuscar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jPanel3.add(txtbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 260, -1));
-
-        JClientes.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        JClientes.setModel(new javax.swing.table.DefaultTableModel(
+        JUsuarios.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        JUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -128,65 +75,97 @@ public class frmUsuario extends javax.swing.JInternalFrame {
                 "ID", "USU", "ROL", "ESTADO"
             }
         ));
-        jScrollPane1.setViewportView(JClientes);
+        jScrollPane1.setViewportView(JUsuarios);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, 380, 230));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 390, 240));
+
+        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel10.setText("Usuario:");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+
+        btnguardar.setForeground(new java.awt.Color(153, 153, 255));
+        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/guardar.png"))); // NOI18N
+        btnguardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
+
+        btneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/eliminar.png"))); // NOI18N
+        btneliminar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(btneliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, -1, -1));
+
+        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel11.setText("Contraseña:");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+
+        jLabel12.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel12.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel12.setText("Rol:");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        txtbuscar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        getContentPane().add(txtbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 290, 40));
+
+        btneditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/editar.png"))); // NOI18N
+        btneditar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, -1, -1));
+
+        jLabel13.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel13.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel13.setText("Estado:");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        txtid.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        getContentPane().add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 30));
+
+        cmbestado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        cmbestado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Habilitado", "Deshabilitado" }));
+        cmbestado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(cmbestado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 140, 40));
+
+        txtclave.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        getContentPane().add(txtclave, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 310, 40));
+
+        txtusuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        getContentPane().add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 310, 40));
+
+        favicon.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
+        favicon.setText("CONCESIONARIA DE AUTOS");
+        getContentPane().add(favicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
+
+        jLabel1.setText("Usuarios Registrados");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
+
+        jSeparator2.setForeground(new java.awt.Color(0, 116, 197));
+        jSeparator2.setPreferredSize(new java.awt.Dimension(60, 60));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 830, 10));
+
+        jSeparator1.setForeground(new java.awt.Color(0, 116, 197));
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator1.setPreferredSize(new java.awt.Dimension(60, 60));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 20, 450));
 
         btnactualizar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnactualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/refresh_5794960.png"))); // NOI18N
         btnactualizar.setText("Actualizar tabla");
-        btnactualizar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnactualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnactualizarActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, -1, 30));
+        btnactualizar.setBorder(null);
+        getContentPane().add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 150, 40));
 
-        cmbrol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Vendedor" }));
-        jPanel3.add(cmbrol, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 140, -1));
-
-        cmbestado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Habilitado", "Deshabilitado" }));
-        jPanel3.add(cmbestado, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 140, -1));
-
+        btncerrarformulario.setBackground(new java.awt.Color(0, 116, 197));
+        btncerrarformulario.setForeground(new java.awt.Color(255, 255, 255));
         btncerrarformulario.setText("Cerrar Formulario");
-        jPanel3.add(btncerrarformulario, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, -1, -1));
+        btncerrarformulario.setBorder(null);
+        getContentPane().add(btncerrarformulario, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 120, 40));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 750, 420));
-
-        jPanel1.setBackground(new java.awt.Color(148, 189, 209));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel2.setBackground(new java.awt.Color(128, 175, 193));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 450, 30));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 140));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/banerusuariso2.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 420, -1));
+        jLabel2.setText("Registra a un nuevo usuario");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnactualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnactualizarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnactualizarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTable JClientes;
+    public javax.swing.JTable JUsuarios;
     public javax.swing.JButton btnactualizar;
     public javax.swing.JButton btncerrarformulario;
     public javax.swing.JButton btneditar;
@@ -194,18 +173,17 @@ public class frmUsuario extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnguardar;
     public javax.swing.JComboBox<String> cmbestado;
     public javax.swing.JComboBox<String> cmbrol;
+    private javax.swing.JLabel favicon;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     public javax.swing.JTextField txtbuscar;
     public javax.swing.JTextField txtclave;
     public javax.swing.JTextField txtid;

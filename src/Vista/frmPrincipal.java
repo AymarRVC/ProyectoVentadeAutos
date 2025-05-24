@@ -4,35 +4,32 @@
  */
 package Vista;
 
+import Controlador.CtrlAutos;
 import Controlador.CtrlClientes;
 import Controlador.CtrlUsuario;
+import Controlador.CtrlVentas;
+import Modelo.ClsAutos;
 import Modelo.ClsClientes;
+import Modelo.ClsConsultaAutos;
 import Modelo.ClsConsultaClientes;
 import Modelo.ClsConsultaUsuarios;
+import Modelo.ClsConsultaVentas;
 import Modelo.ClsUsuario;
+import Modelo.ClsVentas;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-/**
- *
- * @author ecede
- */
 public class frmPrincipal extends javax.swing.JFrame {
 
-    public boolean vis;
-
     /**
-     * Creates new form frmPrincipal
+     * Creates new form frmMenu
      */
+    
+
     public frmPrincipal() {
+
         initComponents();
-
-        if (vis == false) {
-
-            this.panelfondo.setVisible(true);
-            this.Contenedor.setVisible(false);
-        } else {
-            this.panelfondo.setVisible(false);
-            this.Contenedor.setVisible(true);
-        }
+        
     }
 
     /**
@@ -44,15 +41,7 @@ public class frmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
         Contenedor = new javax.swing.JPanel();
-        Panelusuariolog = new javax.swing.JPanel();
-        lbluser = new javax.swing.JLabel();
-        panelfondo = new javax.swing.JPanel();
-        fondo = new javax.swing.JPanel();
-        lbltitulo = new javax.swing.JLabel();
-        lblimagen = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         menuventasautos = new javax.swing.JMenuItem();
@@ -62,114 +51,23 @@ public class frmPrincipal extends javax.swing.JFrame {
         menuventas = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         menuusuarios = new javax.swing.JMenuItem();
-
-        jMenuItem1.setText("jMenuItem1");
-
-        jMenuItem6.setText("jMenuItem6");
+        lbluser = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        Contenedor.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout ContenedorLayout = new javax.swing.GroupLayout(Contenedor);
         Contenedor.setLayout(ContenedorLayout);
         ContenedorLayout.setHorizontalGroup(
             ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 820, Short.MAX_VALUE)
+            .addGap(0, 682, Short.MAX_VALUE)
         );
         ContenedorLayout.setVerticalGroup(
             ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
+            .addGap(0, 443, Short.MAX_VALUE)
         );
-
-        getContentPane().add(Contenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 820, 590));
-
-        Panelusuariolog.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        lbluser.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbluser.setText("Usuario");
-
-        javax.swing.GroupLayout PanelusuariologLayout = new javax.swing.GroupLayout(Panelusuariolog);
-        Panelusuariolog.setLayout(PanelusuariologLayout);
-        PanelusuariologLayout.setHorizontalGroup(
-            PanelusuariologLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelusuariologLayout.createSequentialGroup()
-                .addContainerGap(342, Short.MAX_VALUE)
-                .addComponent(lbluser, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(134, 134, 134))
-        );
-        PanelusuariologLayout.setVerticalGroup(
-            PanelusuariologLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelusuariologLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbluser, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(Panelusuariolog, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 40));
-
-        panelfondo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        lbltitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lbltitulo.setText("GESTION VENTAS DE AUTOS");
-
-        javax.swing.GroupLayout fondoLayout = new javax.swing.GroupLayout(fondo);
-        fondo.setLayout(fondoLayout);
-        fondoLayout.setHorizontalGroup(
-            fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 496, Short.MAX_VALUE)
-            .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(fondoLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(lbltitulo)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        fondoLayout.setVerticalGroup(
-            fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 57, Short.MAX_VALUE)
-            .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(fondoLayout.createSequentialGroup()
-                    .addGap(3, 3, 3)
-                    .addComponent(lbltitulo)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-
-        lblimagen.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblimagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblimagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-12 at 00.19.29.jpeg"))); // NOI18N
-        lblimagen.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-
-        javax.swing.GroupLayout panelfondoLayout = new javax.swing.GroupLayout(panelfondo);
-        panelfondo.setLayout(panelfondoLayout);
-        panelfondoLayout.setHorizontalGroup(
-            panelfondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 706, Short.MAX_VALUE)
-            .addGroup(panelfondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelfondoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(panelfondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelfondoLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(lblimagen, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(25, Short.MAX_VALUE)))
-        );
-        panelfondoLayout.setVerticalGroup(
-            panelfondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
-            .addGroup(panelfondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelfondoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(panelfondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelfondoLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(lblimagen, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(9, Short.MAX_VALUE)))
-        );
-
-        getContentPane().add(panelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 710, 430));
 
         jMenuBar1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
@@ -179,6 +77,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         menuventasautos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         menuventasautos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-11 at 23.27.05.jpeg"))); // NOI18N
         menuventasautos.setText("Autos");
+        menuventasautos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuventasautosActionPerformed(evt);
+            }
+        });
         jMenu3.add(menuventasautos);
         jMenu3.add(jSeparator1);
 
@@ -195,7 +98,12 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         menuventas.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         menuventas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/WhatsApp Image 2025-04-11 at 23.40.23.jpeg"))); // NOI18N
-        menuventas.setText("Ventas");
+        menuventas.setText("Vender Autos");
+        menuventas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuventasActionPerformed(evt);
+            }
+        });
         jMenu3.add(menuventas);
 
         jMenuBar1.add(jMenu3);
@@ -215,7 +123,21 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        lbluser.setText("Usuario Logueado");
+        jMenuBar1.add(lbluser);
+
         setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -224,45 +146,88 @@ public class frmPrincipal extends javax.swing.JFrame {
         ClsClientes clientes = new ClsClientes();
         ClsConsultaClientes consultaClientes = new ClsConsultaClientes();
         frmCliente frmCliente1 = new frmCliente();
-        CtrlClientes ctrlClientes = new CtrlClientes(clientes, consultaClientes, frmCliente1, this);
+        CtrlClientes ctrlClientes = new CtrlClientes(clientes, consultaClientes, frmCliente1,this);
         ctrlClientes.Iniciar();
-        vis = true;
+        Contenedor.removeAll();
+        Contenedor.setLayout(null);
 
-        if (vis == true) {
-            this.panelfondo.setVisible(false);
-            this.Contenedor.setVisible(true);
-
-            Contenedor.add(frmCliente1);
-            frmCliente1.setLocation((Contenedor.getWidth() - frmCliente1.getWidth()) / 2, (Contenedor.getHeight() - frmCliente1.getHeight()) / 2);
-            frmCliente1.setVisible(true);
-        }
+        frmCliente1.setSize(842, 536); 
+        frmCliente1.setLocation(
+                (Contenedor.getWidth() - frmCliente1.getWidth()) / 2,
+                (Contenedor.getHeight() - frmCliente1.getHeight()) / 2
+        );
+        Contenedor.add(frmCliente1);
+        Contenedor.revalidate();
+        Contenedor.repaint();
+        frmCliente1.setVisible(true);
 
     }//GEN-LAST:event_menuclientesActionPerformed
 
-    /* public void ACtivar() {
-        if (ctrlClientes.visible == true) {
-            vis = true;
-        } else {
-            vis = false;
-        }
-    }*/
     private void menuusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuusuariosActionPerformed
         ClsUsuario usuario = new ClsUsuario();
         ClsConsultaUsuarios consultaUsuarios = new ClsConsultaUsuarios();
         frmUsuario frmUsuario1 = new frmUsuario();
-        CtrlUsuario ctrl = new CtrlUsuario(usuario, consultaUsuarios, frmUsuario1, this);
+        CtrlUsuario ctrl = new CtrlUsuario(usuario, consultaUsuarios, frmUsuario1,this);
         ctrl.Iniciar();
-        vis = true;
-        if (vis == true) {
-            this.panelfondo.setVisible(false);
-            this.Contenedor.setVisible(true);
-            Contenedor.add(frmUsuario1);
-            frmUsuario1.setLocation((Contenedor.getWidth() - frmUsuario1.getWidth()) / 2, (Contenedor.getHeight() - frmUsuario1.getHeight()) / 2);
-            frmUsuario1.setVisible(true);
-        }
+        Contenedor.removeAll();
+        Contenedor.setLayout(null);
+
+        frmUsuario1.setSize(842, 536); 
+        frmUsuario1.setLocation(
+                (Contenedor.getWidth() - frmUsuario1.getWidth()) / 2,
+                (Contenedor.getHeight() - frmUsuario1.getHeight()) / 2
+        );
+        Contenedor.add(frmUsuario1);
+        Contenedor.revalidate();
+        Contenedor.repaint();
+        frmUsuario1.setVisible(true);
 
 
     }//GEN-LAST:event_menuusuariosActionPerformed
+
+    private void menuventasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuventasActionPerformed
+        ClsVentas ventas = new ClsVentas();
+        ClsConsultaVentas consultaVentas = new ClsConsultaVentas();
+        frmVentas frmVentas1 = new frmVentas();
+        CtrlVentas ctrl = new CtrlVentas(ventas, consultaVentas, frmVentas1,this);
+        try {
+            ctrl.Iniciar();
+        } catch (Exception ex) {
+            Logger.getLogger(frmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Contenedor.removeAll();
+        Contenedor.setLayout(null);
+
+        frmVentas1.setSize(842, 536); 
+        frmVentas1.setLocation(
+                (Contenedor.getWidth() - frmVentas1.getWidth()) / 2,
+                (Contenedor.getHeight() - frmVentas1.getHeight()) / 2
+        );
+        Contenedor.add(frmVentas1);
+        Contenedor.revalidate();
+        Contenedor.repaint();
+        frmVentas1.setVisible(true);
+    }//GEN-LAST:event_menuventasActionPerformed
+
+    private void menuventasautosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuventasautosActionPerformed
+         ClsAutos autos = new ClsAutos();
+        ClsConsultaAutos consultaAutos = new ClsConsultaAutos();
+        frmAuto frmAuto1 = new frmAuto();
+        CtrlAutos ctrl = new CtrlAutos(autos, consultaAutos, frmAuto1,this);
+        ctrl.Iniciar();
+        Contenedor.removeAll();
+        Contenedor.setLayout(null);
+
+        frmAuto1.setSize(842, 536); 
+        frmAuto1.setLocation(
+                (Contenedor.getWidth() - frmAuto1.getWidth()) / 2,
+                (Contenedor.getHeight() - frmAuto1.getHeight()) / 2
+        );
+        Contenedor.add(frmAuto1);
+        Contenedor.revalidate();
+        Contenedor.repaint();
+        frmAuto1.setVisible(true);
+    }//GEN-LAST:event_menuventasautosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -275,7 +240,7 @@ public class frmPrincipal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -290,6 +255,7 @@ public class frmPrincipal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -301,22 +267,15 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel Contenedor;
-    private javax.swing.JPanel Panelusuariolog;
-    public javax.swing.JPanel fondo;
     public javax.swing.JMenu jMenu1;
     public javax.swing.JMenu jMenu3;
     public javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
-    public javax.swing.JLabel lblimagen;
-    public javax.swing.JLabel lbltitulo;
-    public javax.swing.JLabel lbluser;
+    public javax.swing.JMenu lbluser;
     public javax.swing.JMenuItem menuclientes;
     public javax.swing.JMenuItem menuusuarios;
     public javax.swing.JMenuItem menuventas;
     public javax.swing.JMenuItem menuventasautos;
-    public javax.swing.JPanel panelfondo;
     // End of variables declaration//GEN-END:variables
 }

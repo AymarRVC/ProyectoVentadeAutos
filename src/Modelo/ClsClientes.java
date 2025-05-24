@@ -58,7 +58,7 @@ public class ClsClientes {
     
     @Override
     public String toString() {
-        return getNombre()+" - "+getApellido();
+        return getCedula()+" - "+getNombre()+" "+getApellido();
     }
     
     

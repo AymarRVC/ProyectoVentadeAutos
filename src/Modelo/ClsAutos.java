@@ -5,8 +5,8 @@
 package Modelo;
 
 public class ClsAutos {
-    int id, anio;
-    String marca, modelo, estado;
+    int id, anio,estado;
+    String marca, modelo;
     double precio;
     
     public int getId() {
@@ -41,11 +41,11 @@ public class ClsAutos {
         this.modelo = modelo;
     }
     
-    public String getEstado() {
+    public int getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(int estado) {
         this.estado = estado;
     }
     
@@ -59,7 +59,7 @@ public class ClsAutos {
     
     @Override
     public String toString() {
-        return getModelo()+" - "+getMarca()+ " - "+getEstado()+" - "+getPrecio()+" - "+getAnio();
+        return getMarca();
     }
     
            

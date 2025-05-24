@@ -8,6 +8,7 @@ import Modelo.ClsClientes;
 import Modelo.ClsConsultaClientes;
 import Vista.frmCliente;
 import Vista.frmPrincipal;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -26,14 +27,13 @@ public class CtrlClientes implements ActionListener, KeyListener {
     ClsClientes em;
     ClsConsultaClientes sqlemp;
     frmCliente frm;
-    public boolean visible;
-    frmPrincipal principal;
+    frmPrincipal menu = new frmPrincipal();
 
-    public CtrlClientes(ClsClientes em, ClsConsultaClientes sqlemp, frmCliente frm, frmPrincipal principal) {
+    public CtrlClientes(ClsClientes em, ClsConsultaClientes sqlemp, frmCliente frm,frmPrincipal menu) {
         this.em = em;
         this.sqlemp = sqlemp;
         this.frm = frm;
-        this.principal = principal;
+        this.menu = menu;
         this.frm.btnguardar.addActionListener(this);
         this.frm.btneditar.addActionListener(this);
         this.frm.btneliminar.addActionListener(this);
@@ -75,15 +75,24 @@ public class CtrlClientes implements ActionListener, KeyListener {
         //frm.setVisible(true);
     }
 
-    public boolean cerrar() {
-        visible = true;
+    public void cerrar() {
+        
+        FondoPanel fondo2 = new FondoPanel();
+        menu.Contenedor.removeAll();
+        menu.Contenedor.revalidate();
+        menu.Contenedor.repaint();
+        menu.Contenedor.setLayout(new BorderLayout());
+        menu.Contenedor.add(fondo2, BorderLayout.CENTER);
+        menu.Contenedor.setComponentZOrder(fondo2, menu.Contenedor.getComponentCount() - 1);
 
+        menu.Contenedor.addComponentListener(new java.awt.event.ComponentAdapter() {
+            @Override
+            public void componentResized(java.awt.event.ComponentEvent evt) {
+                fondo2.repaint();
+            }
+        });
         frm.setVisible(false);
 
-        principal.Contenedor.setVisible(false);
-        principal.panelfondo.setVisible(true);
-        principal.vis = true;
-        return visible;
     }
 
     @Override

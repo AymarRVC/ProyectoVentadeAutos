@@ -23,92 +23,90 @@ public class frmCliente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        txtid = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        txtcedula = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         txtnombre = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
         txtapellido = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
         txtcorreo = new javax.swing.JTextField();
-        txttelf = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        txtbuscar = new javax.swing.JTextField();
+        txttelf = new javax.swing.JTextField();
         btnguardar = new javax.swing.JButton();
         btneditar = new javax.swing.JButton();
         btneliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbClientes = new javax.swing.JTable();
-        btnactualizar = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel13 = new javax.swing.JLabel();
-        txtid = new javax.swing.JTextField();
         btncerrarformulario = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
-        txtcedula = new javax.swing.JTextField();
+        btnactualizar = new javax.swing.JButton();
+        txtbuscar = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        favicon = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
 
-        setClosable(true);
+        setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/cli.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 180));
+        txtid.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        getContentPane().add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 30));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel14.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel14.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel14.setText("Cedula:");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/cli.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 180));
-
-        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel8.setText("Buscar:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, -1, -1));
+        txtcedula.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        getContentPane().add(txtcedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 260, 40));
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel9.setText("Nombre:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+
+        txtnombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        getContentPane().add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 320, 40));
 
         jLabel10.setBackground(new java.awt.Color(0, 0, 0));
         jLabel10.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel10.setText("Apellido:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, 30));
+
+        txtapellido.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        getContentPane().add(txtapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 320, 40));
 
         jLabel11.setBackground(new java.awt.Color(0, 0, 0));
         jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel11.setText("Correo:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, -1, -1));
-        jPanel1.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 180, -1));
-        jPanel1.add(txtapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 180, -1));
-        jPanel1.add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 180, -1));
-        jPanel1.add(txttelf, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, 180, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, 40));
+
+        txtcorreo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        getContentPane().add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 250, 40));
 
         jLabel12.setBackground(new java.awt.Color(0, 0, 0));
         jLabel12.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel12.setText("Telefono:");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, 40));
 
-        txtbuscar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtbuscarKeyTyped(evt);
-            }
-        });
-        jPanel1.add(txtbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 210, -1));
+        txttelf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        getContentPane().add(txttelf, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 230, 40));
 
         btnguardar.setForeground(new java.awt.Color(153, 153, 255));
         btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/guardar.png"))); // NOI18N
         btnguardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+        getContentPane().add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
 
         btneditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/editar.png"))); // NOI18N
         btneditar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, -1, -1));
+        getContentPane().add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, -1, -1));
 
         btneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/eliminar.png"))); // NOI18N
         btneliminar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(btneliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 480, -1, -1));
+        getContentPane().add(btneliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, -1, -1));
 
         tbClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -123,63 +121,49 @@ public class frmCliente extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(tbClientes);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 380, 260));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 430, 260));
+
+        btncerrarformulario.setBackground(new java.awt.Color(0, 116, 197));
+        btncerrarformulario.setForeground(new java.awt.Color(255, 255, 255));
+        btncerrarformulario.setText("Cerrar Formulario");
+        btncerrarformulario.setBorder(null);
+        getContentPane().add(btncerrarformulario, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 120, 40));
 
         btnactualizar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnactualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG1.1/refresh_5794960.png"))); // NOI18N
         btnactualizar.setText("Actualizar tabla");
-        btnactualizar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnactualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnactualizarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, -1, -1));
+        btnactualizar.setBorder(null);
+        getContentPane().add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, 150, 40));
 
-        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        txtbuscar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        getContentPane().add(txtbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 330, 30));
+
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel8.setText("Buscar:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, -1, -1));
+
+        jSeparator2.setForeground(new java.awt.Color(0, 116, 197));
+        jSeparator2.setPreferredSize(new java.awt.Dimension(60, 60));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 830, 10));
+
+        favicon.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
+        favicon.setText("CONCESIONARIA DE AUTOS");
+        getContentPane().add(favicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
+
+        jLabel1.setText("Registra a un nuevo cliente");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
+
+        jSeparator1.setForeground(new java.awt.Color(0, 116, 197));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 10, 370));
+        jSeparator1.setPreferredSize(new java.awt.Dimension(60, 60));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 20, 450));
 
-        jLabel13.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel13.setText("ID:");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
-
-        txtid.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jPanel1.add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 50, -1));
-
-        btncerrarformulario.setText("Cerrar Formulario");
-        jPanel1.add(btncerrarformulario, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 520, -1, -1));
-
-        jLabel14.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel14.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel14.setText("Cedula:");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
-
-        txtcedula.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtcedulaKeyTyped(evt);
-            }
-        });
-        jPanel1.add(txtcedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 180, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 640));
+        jLabel2.setText("Clientes Registrados");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnactualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnactualizarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnactualizarActionPerformed
-
-    private void txtcedulaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcedulaKeyTyped
-       
-    }//GEN-LAST:event_txtcedulaKeyTyped
-
-    private void txtbuscarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtbuscarKeyTyped
-       
-    }//GEN-LAST:event_txtbuscarKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -188,18 +172,18 @@ public class frmCliente extends javax.swing.JInternalFrame {
     public javax.swing.JButton btneditar;
     public javax.swing.JButton btneliminar;
     public javax.swing.JButton btnguardar;
+    private javax.swing.JLabel favicon;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     public javax.swing.JTable tbClientes;
     public javax.swing.JTextField txtapellido;
     public javax.swing.JTextField txtbuscar;
