@@ -26,6 +26,10 @@ public class frmLogin extends javax.swing.JFrame {
         ClsUsuario usuario = new ClsUsuario();
         ClsConsultaUsuarios consultaUsuario = new ClsConsultaUsuarios();
         CtrlLogin ctrl = new CtrlLogin(usuario, consultaUsuario, this);
+        if (userTxt.getText().equals("Ingrese su nombre de usuario")) {
+            userTxt.setText("");
+            userTxt.setForeground(Color.black);
+        }
         ctrl.Iniciar();
     }
 

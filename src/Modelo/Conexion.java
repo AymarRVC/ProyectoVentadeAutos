@@ -12,24 +12,25 @@ import java.util.logging.Logger;
 
 /**
  *
- * 
+ *
  */
 public class Conexion {
-     final String bdd="venta_autos"; 
-   final String user="root";
-    String pwd="";
-    String url="jdbc:mysql://localhost:3306/" + bdd;
+
+    final String bdd = "venta_autos";
+    final String user = "root";
+    String pwd = "";
+    String url = "jdbc:mysql://localhost:3306/" + bdd;
     Connection conexion;
-    
-    public Connection getConexion(){
-    
-       try {
-           Class.forName("com.mysql.cj.jdbc.Driver");
-           conexion=(Connection)DriverManager.getConnection(url,user,pwd);
-       } catch (ClassNotFoundException | SQLException ex) {
-           Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
-       }
-       
+
+    public Connection getConexion() {
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conexion = (Connection) DriverManager.getConnection(url, user, pwd);
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         return conexion;
     }
 }

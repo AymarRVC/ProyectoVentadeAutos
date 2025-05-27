@@ -52,6 +52,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         menuusuarios = new javax.swing.JMenuItem();
         lbluser = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -124,6 +125,15 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         lbluser.setText("Usuario Logueado");
+
+        jMenuItem1.setText("Salir ");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        lbluser.add(jMenuItem1);
+
         jMenuBar1.add(lbluser);
 
         setJMenuBar(jMenuBar1);
@@ -229,6 +239,18 @@ public class frmPrincipal extends javax.swing.JFrame {
         frmAuto1.setVisible(true);
     }//GEN-LAST:event_menuventasautosActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        try {
+            frmLogin frm = new frmLogin();
+            frm.setVisible(true);
+            this.dispose();
+        } catch (Exception ex) {
+            Logger.getLogger(frmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+        
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -270,6 +292,7 @@ public class frmPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenu jMenu1;
     public javax.swing.JMenu jMenu3;
     public javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     public javax.swing.JMenu lbluser;

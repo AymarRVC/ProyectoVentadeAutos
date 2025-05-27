@@ -29,7 +29,7 @@ public class CtrlClientes implements ActionListener, KeyListener {
     frmCliente frm;
     frmPrincipal menu = new frmPrincipal();
 
-    public CtrlClientes(ClsClientes em, ClsConsultaClientes sqlemp, frmCliente frm,frmPrincipal menu) {
+    public CtrlClientes(ClsClientes em, ClsConsultaClientes sqlemp, frmCliente frm, frmPrincipal menu) {
         this.em = em;
         this.sqlemp = sqlemp;
         this.frm = frm;
@@ -76,7 +76,7 @@ public class CtrlClientes implements ActionListener, KeyListener {
     }
 
     public void cerrar() {
-        
+
         FondoPanel fondo2 = new FondoPanel();
         menu.Contenedor.removeAll();
         menu.Contenedor.revalidate();
@@ -119,16 +119,20 @@ public class CtrlClientes implements ActionListener, KeyListener {
                 em.setApellido(frm.txtapellido.getText());
                 em.setCorreo(frm.txtcorreo.getText());
                 em.setTelefono(frm.txttelf.getText());
-
-                if (sqlemp.Guardar(em)) {
-
-                    JOptionPane.showMessageDialog(null, "Guardado");
-                    Mostrar();
-                    Limpiar();
+                if (sqlemp.ExisteCliente(em)) {
+                    JOptionPane.showMessageDialog(null, "El cliente con el nùmero de cédula " + em.getCedula() + " ya existe");
                 } else {
-                    JOptionPane.showMessageDialog(null, "No se guardó la informacion");
-                    Limpiar();
+                    if (sqlemp.Guardar(em)) {
+
+                        JOptionPane.showMessageDialog(null, "Guardado");
+                        Mostrar();
+                        Limpiar();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "No se guardó la informacion");
+                        Limpiar();
+                    }
                 }
+
             }
 
         }

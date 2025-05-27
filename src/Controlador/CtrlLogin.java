@@ -34,7 +34,7 @@ public class CtrlLogin implements ActionListener {
     public void Iniciar() {
         this.frm.passTxt.setEchoChar('*');
         this.frm.setLocationRelativeTo(null);
-         this.frm.getRootPane().setDefaultButton(this.frm.btningresar);
+        this.frm.getRootPane().setDefaultButton(this.frm.btningresar);
 
     }
 

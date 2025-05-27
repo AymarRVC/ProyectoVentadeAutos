@@ -182,14 +182,47 @@ public class ClsConsultaClientes extends Conexion {
                 listaemp.add(obj);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ClsConsultaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ClsConsultaClientes.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 con.close();
             } catch (SQLException ex) {
-                Logger.getLogger(ClsConsultaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ClsConsultaClientes.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return listaemp;
+    }
+
+    public boolean ExisteCliente(ClsClientes obj) {
+        PreparedStatement ps = null;
+        Connection con = (Connection) getConexion();
+        ResultSet res = null;
+        String sql = "SELECT * FROM clientes WHERE cedula=?";
+
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, obj.getCedula());
+            res = ps.executeQuery();
+            //paso el resultado de la consulta al modelo
+            if (res.next()) {
+                obj.setId(res.getInt("id_cliente"));
+                obj.setCedula(res.getString("cedula"));
+                obj.setNombre(res.getString("nombre"));
+                obj.setApellido(res.getString("apellido"));
+                obj.setCorreo(res.getString("correo"));
+                obj.setTelefono(res.getString("teléfono"));
+                return true;
+            }
+            return false;
+        } catch (SQLException ex) {
+            Logger.getLogger(ClsConsultaClientes.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(ClsConsultaClientes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 }
